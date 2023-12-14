@@ -1,0 +1,50 @@
+@import '/src/styles/variables.scss';
+
+.wrapper {
+  width: 400px;
+  margin: auto;
+  margin-top: 70px;
+  margin-bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  .info {
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: $primary-color
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: $secondary-color;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .new_task {
+    color: $secondary-color;
+    cursor: pointer;
+    border: 2px solid rgba($primary-color, 0.1);
+    padding: 10px 15px;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: white;
+    }
+  }
+}

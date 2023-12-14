@@ -1,0 +1,11 @@
+@import '/src/styles/variables.scss';
+
+svg {
+  cursor: pointer;
+  transition: stroke .5s;
+  stroke: $primary-color;
+
+  &:hover {
+    stroke: $apply-color;
+  }
+}

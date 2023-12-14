@@ -1,0 +1,11 @@
+@import '/src/styles/variables.scss';
+
+.svg {
+  cursor: pointer;
+  transition: fill .5s;
+  fill: $primary-color;
+
+  &:hover {
+    fill: $warning-color;
+  }
+}
