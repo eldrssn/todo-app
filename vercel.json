@@ -1,5 +1,4 @@
 {
-  "app": "todo-app",
   "build": {
     "target": "server.ts",
     "command": "tsx server.ts"
