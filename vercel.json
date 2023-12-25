@@ -1,0 +1,10 @@
+{
+  "app": "todo-app",
+  "build": {
+    "target": "server.ts",
+    "command": "tsx server.ts"
+  },
+  "env": {
+    "PORT": 8080
+  }
+}
