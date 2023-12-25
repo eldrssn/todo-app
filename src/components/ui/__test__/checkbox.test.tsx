@@ -5,7 +5,7 @@ describe('Checkbox component', () => {
   it('renders checkbox and checkmark correctly', () => {
     render(<Checkbox checked={false} />);
     const checkboxInput = screen.getByRole('checkbox');
-    const checkmark = screen.getByTestId('checkmark');
+    const checkmark = screen.getBytestId('checkmark');
 
     expect(checkboxInput).toBeInTheDocument();
     expect(checkmark).toBeInTheDocument();

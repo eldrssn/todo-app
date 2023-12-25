@@ -11,7 +11,7 @@ export type TasksState = {
 };
 
 const taskSlice = createSlice({
-  name: 'tasks',
+  name: 'tasksSlice',
   initialState,
   reducers: {},
   extraReducers: (builder) => {

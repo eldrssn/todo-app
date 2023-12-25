@@ -3,13 +3,21 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ITask } from '@/models';
 import { BASE_URL } from './constants';
 
+const api = axios.create({
+  baseURL: BASE_URL,
+  timeout: 8000,
+  headers: {
+    Accept: 'application/json',
+  },
+});
+
 export const fetchTasks = createAsyncThunk<
   ITask[],
   void,
   { rejectValue: string }
 >('tasks/fetchTasks', async (_, { rejectWithValue }) => {
   try {
-    const response = await axios.get<ITask[]>(BASE_URL);
+    const response = await api('/');
     return response.data;
   } catch (error) {
     if (axios.isAxiosError(error)) {
@@ -25,7 +33,7 @@ export const createTask = createAsyncThunk<
   { rejectValue: string }
 >('tasks/createTask', async (title, { rejectWithValue }) => {
   try {
-    const response = await axios.post<ITask>(BASE_URL, { title });
+    const response = await api.post<ITask>('/', { title });
     return response.data;
   } catch (error) {
     if (axios.isAxiosError(error)) {
@@ -41,7 +49,7 @@ export const changeTask = createAsyncThunk<
   { rejectValue: string }
 >('tasks/changeTask', async ({ id, title, completed }, { rejectWithValue }) => {
   try {
-    await axios.put(`${BASE_URL}/${id}`, {
+    await api.put(`/${id}`, {
       title,
       completed,
     });
@@ -60,7 +68,7 @@ export const deleteTask = createAsyncThunk<
   { rejectValue: string }
 >('tasks/deleteTask', async (id, { rejectWithValue }) => {
   try {
-    await axios.delete(`${BASE_URL}/${id}`);
+    await api.delete(`/${id}`);
     return id;
   } catch (error) {
     if (axios.isAxiosError(error)) {

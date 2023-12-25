@@ -4,7 +4,8 @@ import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { fetchTasks } from '@/store/tasks/actions';
 import { selectState } from '@/store/selectors';
 
-import { NewTask, Task } from '../task';
+import { Task } from '../task';
+import { NewTask } from '../new-task';
 import styles from './list.module.scss';
 
 export const List = () => {

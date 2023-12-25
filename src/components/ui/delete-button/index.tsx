@@ -2,12 +2,12 @@ import { FC } from 'react';
 import { IconProps } from '@/types';
 import styles from './delete-icon.module.scss';
 
-export const DeleteIcon: FC<IconProps> = ({
+export const DeleteButton: FC<IconProps> = ({
   className,
   onClick,
   type = 'button',
 }) => (
-  <button type={type} onClick={onClick} data-testId="delete-icon">
+  <button type={type} onClick={onClick} data-testid="delete-icon">
     <svg
       className={`${styles.svg} ${className}`}
       fill="#000000"

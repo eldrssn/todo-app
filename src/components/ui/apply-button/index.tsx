@@ -2,12 +2,12 @@ import { FC } from 'react';
 import { IconProps } from '@/types';
 import styles from './apply-icon.module.scss';
 
-export const ApplyIcon: FC<IconProps> = ({
+export const ApplyButton: FC<IconProps> = ({
   className,
   onClick,
   type = 'button',
 }) => (
-  <button type={type} onClick={onClick} data-testId="apply-icon">
+  <button type={type} onClick={onClick} data-testid="apply-icon">
     <svg
       className={`${styles.svg} ${className}`}
       viewBox="0 0 24 24"

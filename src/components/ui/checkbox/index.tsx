@@ -10,6 +10,6 @@ interface CheckboxProps {
 export const Checkbox: FC<CheckboxProps> = ({ checked, onChange }) => (
   <label className={styles.checkbox_container}>
     <input checked={checked} onChange={onChange} type="checkbox" />
-    <span className={styles.checkmark} data-testId="checkmark"></span>
+    <span className={styles.checkmark} data-testid="checkmark"></span>
   </label>
 );

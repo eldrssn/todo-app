@@ -1,11 +1,11 @@
+import { DeleteButton } from '@/components/ui/delete-button';
 import { render, fireEvent } from '@testing-library/react';
-import { ApplyIcon } from '@/components/ui/apply-icon';
 
-describe('ApplyIcon', () => {
+describe('DeleteButton', () => {
   it('calls the onClick event handler when clicked', () => {
     const handleClick = jest.fn();
-    const { getByTestId } = render(<ApplyIcon onClick={handleClick} />);
-    const button = getByTestId('apply-icon');
+    const { getByTestId } = render(<DeleteButton onClick={handleClick} />);
+    const button = getByTestId('delete-icon');
 
     fireEvent.click(button);
 
